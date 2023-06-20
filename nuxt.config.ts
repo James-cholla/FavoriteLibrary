@@ -1,12 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  runtimeConfig: {
-    // The private keys which are only available server-side
-    apiSecret: '123',
-    // Keys within public are also exposed client-side
-    public: {
-      apiBase: 'https://api.cholla.info/'
+    devtools: { enabled: false },
+  
+    runtimeConfig: {
+      apiSecret: '123',
+      public: {
+        apiBase: "https://api.cholla.info/"
+      }
+    },
+
+    modules: [
+      '@ant-design-vue/nuxt',
+    ],
+    antd:{
+      // Options 
     }
-  }
-})
+  
+  })
